@@ -8,6 +8,7 @@
 
 /* ES 6 */
 
+import React from 'react';
 import ReactDOM from 'react-dom';
 //import MessageBox from './MessageBox';
 import Feed from './Feeds/Feed';
