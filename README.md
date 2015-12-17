@@ -13,3 +13,4 @@ npm run clean (to delete the build folder)
 npm run hot (webpack-dev-server)
 
 
+open http://localhost:8080/index.html
