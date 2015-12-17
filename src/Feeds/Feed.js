@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import ShowAddButton from './ShowAddButton';
 import FeedForm from './FeedForm';
 import FeedList from './FeedList';
@@ -8,6 +8,7 @@ export default class Feed extends Component {
     constructor(props) {
         super(props);
         this.onToggleForm = this.onToggleForm.bind(this);
+        this.onNewItem = this.onNewItem.bind(this);
         var FEED_ITEMS =[
             {key: '1', title: 'realTimeData', description: 'sample', voteCount:60},
             {key: '2', title: 'REACT IS AWESOME', description: 'sample', voteCount:50},
@@ -22,9 +23,9 @@ export default class Feed extends Component {
         });
     }
     onNewItem(newItems) {
-        var newItems = this.state.items.concat([newItems]);
+        var newArticles = this.state.items.concat([newItems]);
         this.setState({
-            item: newItems,
+            items: newArticles,
             formDisplayed: false
         });
     }

@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import FeedItem from "./FeedItem";
 
 export default class FeedList extends Component {

@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 export default class FeedForm extends Component {
     constructor() {
@@ -7,7 +7,6 @@ export default class FeedForm extends Component {
     }
     handleForm(e) {
         e.preventDefault();
-        console.log(this.props.children);
         var newItem = {
             title: this.refs.title.value,
             description: this.refs.desc.value,
