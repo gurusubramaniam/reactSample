@@ -1,4 +1,7 @@
 # reactSample
+This is sample Voting app using react, ES6, webpack
+
+#To Run 
 Once cloned 
 run 
 npm install 
