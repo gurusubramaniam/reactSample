@@ -17,7 +17,7 @@ export default class Feed extends Component {
             {key: '3', title: 'BIT CONFUSED NOW', description: 'sample', voteCount:20},
             {key: '4', title: 'ES6 man !!!! ', description: 'Es6 is super super cool with react i just love it ', voteCount:20}
         ];
-        var sorted = _.sortByOrder(FEED_ITEMS,['voteCount'],['asc']);
+        var sorted = _.sortByOrder(FEED_ITEMS,['voteCount'],['dsc']);
         this.state = {items: sorted, formDisplayed: false}
     }
     onToggleForm() {
@@ -27,8 +27,9 @@ export default class Feed extends Component {
     }
     onNewItem(newItems) {
         var newArticles = this.state.items.concat([newItems]);
+        var sorted = _.sortByOrder(newArticles, ['voteCount'], ['dsc']);
         this.setState({
-            items: newArticles,
+            items: sorted,
             formDisplayed: false,
             key: this.state.items.length
         });
@@ -43,7 +44,7 @@ export default class Feed extends Component {
         var newItems = _.pull(items, oldObj);
 
         newItems.push(item);
-        var sorted = _.sortByOrder(newItems,['voteCount'],['asc']);
+        var sorted = _.sortByOrder(newItems,['voteCount'],['dsc']);
         this.setState({
             items: sorted
         });

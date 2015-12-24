@@ -9,7 +9,6 @@ export default class FeedItem extends Component {
         this.vote = this.vote.bind(this);
     }
     vote(newCount) {
-        console.log("sasasasas", newCount, this.props);
         this.props.onVote({
             key: this.props.prompt,
             title : this.props.title,
@@ -20,7 +19,6 @@ export default class FeedItem extends Component {
     }
     voteUp() {
         var count = parseInt(this.props.voteCount);
-        console.log(count);
         var newCount = count + 1;
         this.vote(newCount);
     }
