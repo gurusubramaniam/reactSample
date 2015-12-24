@@ -50,12 +50,16 @@ export default class Feed extends Component {
         });
     }
     render(){
+        var createNewStyle= {
+            paddingBottom: "20px"
+        };
          return (
                 <div>
-                    <div className="container">
+                    <div className="container" style={createNewStyle}>
                         <ShowAddButton displayed={this.state.formDisplayed} onToggleForm={this.onToggleForm}/>
+                        <FeedForm displayed={this.state.formDisplayed} onNewItem={this.onNewItem}/>
                     </div>
-                <FeedForm displayed={this.state.formDisplayed} onNewItem={this.onNewItem}/>
+
                  <FeedList items={this.state.items} onVote={this.onVote}/>
              </div>
          );

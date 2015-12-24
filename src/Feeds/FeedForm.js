@@ -21,7 +21,7 @@ export default class FeedForm extends Component {
             display: display
         };
         return(
-            <form ref="feedForm" style={styles} className="container" id="feedForm" onSubmit={this.handleForm}>
+            <form ref="feedForm" style={styles} id="feedForm" onSubmit={this.handleForm}>
                 <div clasName="form-group">
                     <input ref="title" type = "text" placeholder="Title" className="form-control"/>
                     <input ref="desc" type = "text" placeholder="Description" className="form-control"/>

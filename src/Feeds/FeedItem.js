@@ -30,7 +30,7 @@ export default class FeedItem extends Component {
     render() {
         return (
             <li key={this.props.prompt} className="list-group-item">
-                <span className="badge badge-success">{this.props.key} {this.props.voteCount}</span>
+                <span className="badge badge-success">{this.props.voteCount}</span>
                 <h1>{this.props.title}</h1>
                 <span>{this.props.description}</span>
                 <span className="pull-right">

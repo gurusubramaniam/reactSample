@@ -5,7 +5,6 @@ export default class FeedList extends Component {
     render() {
         var onClickHandler = this.props.onVote;
         var feedItem = this.props.items.map(function(item) {
-            console.log("Feed List Value ", item.key, item.voteCount);
             return <FeedItem
                 prompt={item.key}
                 title={item.title}
